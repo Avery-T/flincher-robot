@@ -40,7 +40,8 @@ void main()
 }
 return; 
 } 
-
+/* the robot has two distance sensors and it spins in a circle 
+   scaning to see if anything aproaches it */ 
 STATE scan()
 {
      uint8_t right_sensor = analog(RIGHT_SENSOR); 
@@ -60,6 +61,7 @@ STATE scan()
 		}	
 } 
 
+/*if somthing is closer a object is to the sensors the more it moves back, it also tracks the incoming angle and centers itself so the obejct cant sneak up on it */
 STATE dodge()
 {
      clear_screen(); 
